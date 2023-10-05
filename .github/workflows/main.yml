@@ -1,16 +1,27 @@
-name: dockerr
-
+name: ci
+# run all tests on the main branch
 on:
   push:
-    branches: main
-
+    branches:
+      - main
 jobs:
-  login:
-    runs-on: ubuntu-latest
+  test-http:
+    runs-on: ubuntu-20.04
     steps:
-      -
-        name: Login to Docker Hub
-        uses: docker/login-action@v1
+      - name: Check out code 🛎
+        uses: actions/checkout@v2
+
+      # run utility services in the background
+      # using docker-compose (see docker-compose.yml file)
+      - name: Run docker-compose
+        run: docker-compose up -d
+
+      # https://github.com/cypress-io/github-action
+      - name: Cypress tests 🧪
+        uses: cypress-io/github-action@v2
         with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+          build: npm run stop-only
+          start: npm start
+          wait-on: 'http://localhost:3000'
+          record: true
+          group: 'All GH Tests (HTTP)'
