@@ -16,3 +16,7 @@ jobs:
       - name: Run docker-compose
         run: docker-compose up -d
 
+      - name: checkout
+        run: actions/checkout@v2
+
+        
