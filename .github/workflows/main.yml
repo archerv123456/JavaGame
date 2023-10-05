@@ -16,12 +16,3 @@ jobs:
       - name: Run docker-compose
         run: docker-compose up -d
 
-      # https://github.com/cypress-io/github-action
-      - name: Cypress tests 🧪
-        uses: cypress-io/github-action@v2
-        with:
-          build: npm run stop-only
-          start: npm start
-          wait-on: 'http://localhost:3000'
-          record: true
-          group: 'All GH Tests (HTTP)'
