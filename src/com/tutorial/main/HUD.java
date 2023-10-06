@@ -14,6 +14,8 @@ public class HUD {
 	static int score = 0;
 	private static float level = 0;
 	
+	static int graze = 0;
+	
 	public static float reviveTimer = 0;
 	public static boolean canRevive = false;
 	
@@ -57,6 +59,7 @@ public class HUD {
 		
 		if (Game.showExtraStats == true &!(Game.gameState == STATE.PvPP2) &!(Game.gameState == STATE.PvPP4)) {
 			g.drawString("Health: " + (int) HEALTH, 75, 13);
+			g.drawString("Graze: " + (int) graze, 155, 13);
 			g.drawString("SPD: " + Handler.spd, 15, 94);
 			g.drawString("reviveTimer: " + reviveTimer, 15, 109);
 			g.drawString("canRevive: " + canRevive, 15, 124);

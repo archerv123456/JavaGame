@@ -11,7 +11,7 @@ public class Player4 extends GameObject{
 	Handler handler;
 	private long lastCollisionTime = 0;
 	private long collisionCooldown = 500; // Cooldown in milliseconds (1 second in this example)
-	private boolean isBlinking = false;
+	static boolean isBlinking = false;
 	private int blinkInterval = 200; // Blink interval in milliseconds
 	private boolean shouldRenderPlayer = true;
 

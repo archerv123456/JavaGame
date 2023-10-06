@@ -9,7 +9,6 @@ import java.awt.event.MouseEvent;
 
 import com.tutorial.main.Game.STATE;
 
-
 public class Menu extends MouseAdapter{
 	
 	private Game game;
@@ -103,9 +102,12 @@ public class Menu extends MouseAdapter{
 				HUD2.canRevive = false;
 				HUD3.canRevive = false;
 				HUD4.canRevive = false;
+				HUD.graze = 0;
 				handler.clearEnemys();
 				Game.gameState = STATE.Menu;
 				
+				
+				Spawn.scoreKeep = 0;
 				HUD.setLevel(0.0f);
 				HUD.setScore(0);
 				Shop.B1 = 2000;

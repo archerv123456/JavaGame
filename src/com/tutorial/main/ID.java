@@ -6,6 +6,7 @@ public enum ID {
 	Player2(),
 	Player3(),
 	Player4(),
+	GrazeBox(),
 	BasicEnemy(),
 	SlowEnemy(),
 	HardEnemy(),

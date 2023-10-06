@@ -11,7 +11,7 @@ public class Spawn {
 	private Game game;
 	private Random r = new Random();
 	
-	private int scoreKeep = 0;
+	static int scoreKeep = 0;
 	
 	public Spawn(Handler handler, HUD hud, Game game) {
 		this.handler = handler;

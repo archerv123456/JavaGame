@@ -11,7 +11,7 @@ public class Player extends GameObject{
 	Handler handler;
 	private long lastCollisionTime = 0;
 	private long collisionCooldown = 500; // Cooldown in milliseconds (1 second in this example)
-	private boolean isBlinking = false;
+	public static boolean isBlinking = false;
 	private int blinkInterval = 100; // Blink interval in milliseconds
 	private boolean shouldRenderPlayer = true;
 
@@ -22,7 +22,7 @@ public class Player extends GameObject{
 	}
 	
 	public Rectangle getBounds() {
-		return new Rectangle((int)x, (int)y, 16, 16);
+		return new Rectangle((int)x, (int)y, 12, 12);
 	}
 
 	
