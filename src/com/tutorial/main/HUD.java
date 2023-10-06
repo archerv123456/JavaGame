@@ -36,7 +36,15 @@ public class HUD {
 			} else if(HUD.HEALTH > 0) {
 				reviveTimer = 0;
 				canRevive = false;
+				bounds = 0;
+				Handler.spd = 6;
 			}
+		}
+		
+		if(graze >= 100) {
+			bounds += 10;
+			Handler.spd += 1;
+			graze = 0;
 		}
 	}
 	

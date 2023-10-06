@@ -114,6 +114,7 @@ public class Menu extends MouseAdapter{
 				Shop.B2 = 1500;
 				Shop.B3 = 1000;
 				HUD.bounds = 0;
+				handler.spd = 6;
 				
 				//hud2.setScore(0);
 				

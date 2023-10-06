@@ -35,6 +35,10 @@ public class HUD2 {
 			reviveTimer = 0;
 			canRevive = false;
 		}
+		
+		if(HUD.graze >= 100) {
+			bounds2 += 10;
+		}
 	}
 	
 	public static void render(Graphics g) {

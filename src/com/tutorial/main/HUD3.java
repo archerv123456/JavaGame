@@ -35,6 +35,10 @@ public class HUD3 {
 				canRevive = false;
 			}
 		}
+		
+		if(HUD.graze >= 100) {
+			bounds2 += 10;
+		}
 	}
 	
 	public void render(Graphics g) {

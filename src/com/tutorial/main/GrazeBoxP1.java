@@ -71,7 +71,7 @@ public class GrazeBoxP1 extends GameObject{
 			else if(tempObject.getId() == ID.SlowEnemy) {
 				if(getBounds().intersects(tempObject.getBounds())) {
 					HUD.HEALTH += 2;
-					HUD.graze += 1;
+					HUD.graze += 2;
 					lastCollisionTime = currentTime;
 			}	
 		}
@@ -86,7 +86,7 @@ public class GrazeBoxP1 extends GameObject{
 			else if(tempObject.getId() == ID.FastEnemy) {
 					if(getBounds().intersects(tempObject.getBounds())) {
 						HUD.HEALTH += 1;
-						HUD.graze += 1;
+						HUD.graze += 2;
 						lastCollisionTime = currentTime;
 				} 
 			}
@@ -101,7 +101,7 @@ public class GrazeBoxP1 extends GameObject{
 			else if(tempObject.getId() == ID.EnemyBoss) {
 					if(getBounds().intersects(tempObject.getBounds())) {
 						HUD.HEALTH += 2;
-						HUD.graze += 1;
+						HUD.graze += 3;
 						lastCollisionTime = currentTime;
 				}
 			}
@@ -109,14 +109,14 @@ public class GrazeBoxP1 extends GameObject{
 			else if(tempObject.getId() == ID.HardEnemy) {
 					if(getBounds().intersects(tempObject.getBounds())) {
 						HUD.HEALTH += 2;
-						HUD.graze += 1;
+						HUD.graze += 2;
 						lastCollisionTime = currentTime;
 				}
 			}
 			else if(tempObject.getId() == ID.LunaiticEnemy) {
 				if(getBounds().intersects(tempObject.getBounds())) {
 					HUD.HEALTH += 3;
-					HUD.graze += 1;
+					HUD.graze += 3;
 					lastCollisionTime = currentTime;
 				}
 			}
