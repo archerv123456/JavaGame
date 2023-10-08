@@ -63,7 +63,7 @@ public class GrazeBoxP4 extends GameObject{
 			if(tempObject.getId() == ID.BasicEnemy) {
 				if(getBounds().intersects(tempObject.getBounds())) {
 					HUD4.HEALTH += 1;
-					HUD.graze += 1;
+					HUD4.graze += 1;
 					lastCollisionTime = currentTime;
 				}
 			}
@@ -71,7 +71,7 @@ public class GrazeBoxP4 extends GameObject{
 			else if(tempObject.getId() == ID.SlowEnemy) {
 				if(getBounds().intersects(tempObject.getBounds())) {
 					HUD4.HEALTH += 2;
-					HUD.graze += 1;
+					HUD4.graze += 1;
 					lastCollisionTime = currentTime;
 			}	
 		}
@@ -79,21 +79,21 @@ public class GrazeBoxP4 extends GameObject{
 			else if(tempObject.getId() == ID.Friend) {
 					if(getBounds().intersects(tempObject.getBounds())) {
 						HUD4.HEALTH += 2;
-						HUD.graze += 1;
+						HUD4.graze += 1;
 						lastCollisionTime = currentTime;
 				}	
 			}
 			else if(tempObject.getId() == ID.FastEnemy) {
 					if(getBounds().intersects(tempObject.getBounds())) {
 						HUD4.HEALTH += 1;
-						HUD.graze += 1;
+						HUD4.graze += 1;
 						lastCollisionTime = currentTime;
 				} 
 			}
 			else if(tempObject.getId() == ID.SmartEnemy) {
 					if(getBounds().intersects(tempObject.getBounds())) {
 						HUD4.HEALTH += 1;
-						HUD.graze += 1;
+						HUD4.graze += 1;
 						lastCollisionTime = currentTime;
 				}
 			}
@@ -101,7 +101,7 @@ public class GrazeBoxP4 extends GameObject{
 			else if(tempObject.getId() == ID.EnemyBoss) {
 					if(getBounds().intersects(tempObject.getBounds())) {
 						HUD4.HEALTH += 2;
-						HUD.graze += 1;
+						HUD4.graze += 1;
 						lastCollisionTime = currentTime;
 				}
 			}
@@ -109,14 +109,14 @@ public class GrazeBoxP4 extends GameObject{
 			else if(tempObject.getId() == ID.HardEnemy) {
 					if(getBounds().intersects(tempObject.getBounds())) {
 						HUD4.HEALTH += 2;
-						HUD.graze += 1;
+						HUD4.graze += 1;
 						lastCollisionTime = currentTime;
 				}
 			}
 			else if(tempObject.getId() == ID.LunaiticEnemy) {
 				if(getBounds().intersects(tempObject.getBounds())) {
 					HUD4.HEALTH += 3;
-					HUD.graze += 1;
+					HUD4.graze += 1;
 					lastCollisionTime = currentTime;
 				}
 			}

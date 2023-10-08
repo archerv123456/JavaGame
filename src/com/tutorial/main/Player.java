@@ -10,9 +10,9 @@ public class Player extends GameObject{
 	
 	Handler handler;
 	private long lastCollisionTime = 0;
-	private long collisionCooldown = 500; // Cooldown in milliseconds (1 second in this example)
+	private long collisionCooldown = 500; // Cooldown in milliseconds
 	public static boolean isBlinking = false;
-	private int blinkInterval = 100; // Blink interval in milliseconds
+	private int blinkInterval = 25; // Blink interval in milliseconds
 	private boolean shouldRenderPlayer = true;
 
 
@@ -86,7 +86,7 @@ public class Player extends GameObject{
 			}
 			else if(tempObject.getId() == ID.FastEnemy) {
 					if(getBounds().intersects(tempObject.getBounds())) {
-						HUD.HEALTH -= 35;
+						HUD.HEALTH -= 29;
 						lastCollisionTime = currentTime;
 				} 
 			}
@@ -106,13 +106,13 @@ public class Player extends GameObject{
 				
 			else if(tempObject.getId() == ID.HardEnemy) {
 					if(getBounds().intersects(tempObject.getBounds())) {
-						HUD.HEALTH -= 35;
+						HUD.HEALTH -= 37;
 						lastCollisionTime = currentTime;
 				}
 			}
 			else if(tempObject.getId() == ID.LunaiticEnemy) {
 				if(getBounds().intersects(tempObject.getBounds())) {
-					HUD.HEALTH -= 35;
+					HUD.HEALTH -= 41;
 					lastCollisionTime = currentTime;
 				}
 			}

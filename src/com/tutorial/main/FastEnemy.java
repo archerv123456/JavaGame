@@ -14,7 +14,7 @@ public class FastEnemy extends GameObject{
 		
 		this.handler = handler;
 		
-		velX = 2;
+		velX = 3;
 		velY = 9;
 	}
 	

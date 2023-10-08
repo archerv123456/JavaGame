@@ -2,8 +2,14 @@ package com.tutorial.main;
 
 import java.awt.Canvas;
 import java.awt.Dimension;
-
 import javax.swing.JFrame;
+// import javafx.application.*;
+// import javafx.stage.Stage;
+// import javafx.scene.Scene;
+// import javafx.scene.Parent;
+// import javafx.fxml.FXMLLoader;
+// import javafx.fxml.FXML;
+
 
 public class Window extends Canvas{
 
@@ -15,10 +21,7 @@ public class Window extends Canvas{
 		frame.setPreferredSize(new Dimension(width, height));
 		frame.setMaximumSize(new Dimension(width, height));
 		frame.setMinimumSize(new Dimension(width, height));
-		if (Game.fullscreen == true) {
-			frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-		}
-		
+		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
@@ -27,4 +30,12 @@ public class Window extends Canvas{
 		game.start();
 		
 	}
+
+	// @Override
+	// public void start(Stage primaryStage) throws Exception {
+	// 	int WIDTH = 940, HEIGHT = WIDTH / 12 * 9;
+	// 	Scene scene = new Scene(loadFXML("CubeMan"), WIDTH, HEIGHT);
+	// 	primaryStage.setScene(scene);
+	// 	primaryStage.show();
+	// }
 }

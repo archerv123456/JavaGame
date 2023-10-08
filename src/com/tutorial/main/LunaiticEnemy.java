@@ -29,10 +29,10 @@ public class LunaiticEnemy extends GameObject{
 		x += velX;
 		y += velY;
 		
-		int randomY1 = -6 + r.nextInt(16) / -1;
-		int randomY2 = 6 + r.nextInt(16) / 1;
-		int randomX1 = -10 + r.nextInt(20) / -1;
-		int randomX2 = 10 + r.nextInt(20) / 1;
+		int randomY1 = -6 + r.nextInt(6) / -1;
+		int randomY2 = 6 + r.nextInt(6) / 1;
+		int randomX1 = -10 + r.nextInt(9) / -1;
+		int randomX2 = 10 + r.nextInt(9) / 1;
 		
 		if(y >= Game.HEIGHT - 71) velY = randomY1;
 		if(y <= 0) velY = randomY2;

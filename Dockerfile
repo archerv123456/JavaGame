@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk-jammy
+FROM openjdk/8
 RUN apt-get update
 RUN apt-get install -y maven
 COPY ./src /src

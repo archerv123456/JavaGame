@@ -3,7 +3,6 @@ package com.tutorial.main;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Window;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -114,7 +113,7 @@ public class Menu extends MouseAdapter{
 				Shop.B2 = 1500;
 				Shop.B3 = 1000;
 				HUD.bounds = 0;
-				handler.spd = 6;
+				Handler.spd = 6;
 				
 				//hud2.setScore(0);
 				

@@ -73,7 +73,7 @@ public class Shop extends MouseAdapter{
 				if(hud.getScore() >= B2) {
 					HUD.setScore(hud.getScore() - B2);
 					B2 += 1500;	
-					handler.spd++;
+					Handler.spd++;
 				}
 						
 			}

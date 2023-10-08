@@ -84,7 +84,7 @@ long currentTime = System.currentTimeMillis();
 			}
 			else if(tempObject.getId() == ID.FastEnemy) {
 					if(getBounds().intersects(tempObject.getBounds())) {
-						HUD4.HEALTH -= 35;
+						HUD4.HEALTH -= 29;
 						lastCollisionTime = currentTime;
 				} 
 			}
@@ -104,13 +104,13 @@ long currentTime = System.currentTimeMillis();
 				
 			else if(tempObject.getId() == ID.HardEnemy) {
 					if(getBounds().intersects(tempObject.getBounds())) {
-						HUD4.HEALTH -= 35;
+						HUD4.HEALTH -= 37;
 						lastCollisionTime = currentTime;
 				}
 			}
 			else if(tempObject.getId() == ID.LunaiticEnemy) {
 				if(getBounds().intersects(tempObject.getBounds())) {
-					HUD4.HEALTH -= 35;
+					HUD4.HEALTH -= 41;
 					lastCollisionTime = currentTime;
 				}
 			}

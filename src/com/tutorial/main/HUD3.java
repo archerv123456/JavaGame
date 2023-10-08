@@ -13,6 +13,10 @@ public class HUD3 {
 	
 	private static float greenValue = 255f;
 	private int score2 = 0;
+
+	static int graze = 0;
+
+	static int speed = 6;
 	
 	public static float reviveTimer = 0;
 	public static boolean canRevive = false;
@@ -33,11 +37,15 @@ public class HUD3 {
 			} else if(HUD3.HEALTH > 0) {
 				reviveTimer = 0;
 				canRevive = false;
+				speed = 6;
+				graze = 0;
 			}
 		}
 		
-		if(HUD.graze >= 100) {
+		if(HUD3.graze >= 100) {
 			bounds2 += 10;
+			speed += 1;
+			graze = 0;
 		}
 	}
 	
@@ -50,6 +58,7 @@ public class HUD3 {
 		g.drawRect(715, 615, 200 + bounds2, 32);
 		
 		g.drawString("Player3", 870, 613);
+		g.drawString("GRAZE: " + (int) graze, 755, 613);
 		
 		if(HEALTH <= 0 && Game.showExtraStats == false) {
 			g.setColor(Color.WHITE);
@@ -58,7 +67,7 @@ public class HUD3 {
 		
 		if (Game.showExtraStats == true &!(Game.gameState == STATE.PvPP4)) {
 			g.drawString("Health: " + (int) HEALTH, 775, 613);
-			g.drawString("SPD: " + Handler.spd, 715, 594);
+			g.drawString("SPD: " + speed, 715, 594);
 			g.drawString("reviveTimer: " + reviveTimer, 715, 559);
 			g.drawString("canRevive: " + canRevive, 715, 574);
 		}

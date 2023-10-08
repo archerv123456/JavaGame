@@ -62,7 +62,7 @@ public class Game extends Canvas implements Runnable{
 		this.addMouseListener(shop);
 	
 		
-		new Window(WIDTH, HEIGHT, "CubeManP4", this);
+		new Window(WIDTH, HEIGHT, "CubeMan", this);
 		
 		
 		hud2 = new HUD2();
@@ -70,34 +70,9 @@ public class Game extends Canvas implements Runnable{
 		hud4 = new HUD4();
 		spawner = new Spawn(handler, hud, this);
 		menu = new Menu(this, handler, hud);
-			
-		if(gameState == STATE.GameP4) {
-			handler.addObject(new Player(WIDTH/2-32, HEIGHT/2-32, ID.Player, handler));
-			//handler.addObject(new BasicEnemy(WIDTH/3-164, HEIGHT/2-128, ID.BasicEnemy, handler));
-			handler.addObject(new Player2(WIDTH/2-125, HEIGHT/2-114, ID.Player, handler));
-			//handler.addObject(new BasicEnemy(WIDTH/3-164, HEIGHT/2-128, ID.BasicEnemy, handler));
-			handler.addObject(new Player3(WIDTH/2-125, HEIGHT/2-114, ID.Player, handler));
-			handler.addObject(new Player4(WIDTH/2-125, HEIGHT/2-114, ID.Player, handler));
-		}
-		else if(gameState == STATE.PvPP4) {
-			handler.addObject(new Player(WIDTH/2-32, HEIGHT/2-32, ID.Player, handler));
-			//handler.addObject(new BasicEnemy(WIDTH/3-164, HEIGHT/2-128, ID.BasicEnemy, handler));
-			handler.addObject(new Player2(WIDTH/2-125, HEIGHT/2-114, ID.Player2, handler));
-			//handler.addObject(new BasicEnemy(WIDTH/3-164, HEIGHT/2-128, ID.BasicEnemy, handler));
-			handler.addObject(new Player3(WIDTH/2-125, HEIGHT/2-114, ID.Player3, handler));
-			handler.addObject(new Player4(WIDTH/2-125, HEIGHT/2-114, ID.Player4, handler));
-			
-		}
-		else if(gameState == STATE.GameP1) {
-			handler.addObject(new Player(WIDTH/2-32, HEIGHT/2-32, ID.Player, handler));
-		}
-		else if(gameState == STATE.GameP2) {
-			handler.addObject(new Player(WIDTH/2-32, HEIGHT/2-32, ID.Player, handler));
-			//handler.addObject(new BasicEnemy(WIDTH/3-164, HEIGHT/2-128, ID.BasicEnemy, handler));
-			handler.addObject(new Player2(WIDTH/2-125, HEIGHT/2-114, ID.Player2, handler));
-		}
+
 		
-		else{
+		if (Game.gameState == STATE.Menu){
 			for(int i = 0; i < 1; i++) {
 				handler.addObject(new MenuParticle(WIDTH/3-164, HEIGHT/2-128, ID.MenuParticle, handler));
 				handler.addObject(new MenuParticle(WIDTH/2-100, HEIGHT/2-165, ID.MenuParticle, handler));
@@ -154,8 +129,6 @@ public class Game extends Canvas implements Runnable{
 			if(System.currentTimeMillis() - timer > 1000) {
 				timer += 1000;
 				System.out.println("FPS: " + frames);
-				System.out.println(gameState);
-				System.out.println("Objects: " + handler.object);
 				
 				frames = 0;
 			}
